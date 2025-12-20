@@ -1,5 +1,4 @@
 <?php
-
 list($x1, $y1) = explode(" ", trim(fgets(STDIN)));
 list($x2, $y2) = explode(" ", trim(fgets(STDIN)));
 
