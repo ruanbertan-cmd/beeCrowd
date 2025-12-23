@@ -1,14 +1,11 @@
 <?php
-$notas = [100, 50, 20, 10, 5, 2, 1];
+$cedulas = [100, 50, 20, 10, 5, 2, 1];
 $valor = (int) fgets(STDIN);
-echo $valor . "\n";
-if (0 < $valor && $valor < 1000000) {
-    for ($i=0; $i < count($notas); $i++) { 
-        $nota = (int) ($valor / $notas[$i]);
-        $valor = $valor % $notas[$i];
-        echo $nota . " nota(s) de R$ " . number_format($notas[$i], 2,',','') . "\n";
-    }
-} else {
-    echo "Valor inválido!\n";
+echo $valor . PHP_EOL;
+
+foreach ($cedulas as $cedula) {
+    $divisao = intdiv($valor, $cedula);
+    $valor = $valor % $cedula;
+    echo  $divisao . " nota(s) de R$ " . number_format($cedula,2,","," ") . "\n";
 }
 ?>
