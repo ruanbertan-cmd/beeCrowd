@@ -8,8 +8,8 @@ if ($a != 0 & $delta >= 0) {
     $x1 = (-$b + $raizDelta) / (2 * $a);
     $x2 = (-$b - $raizDelta) / (2 * $a);
 
-    printf("R1 = %.5f\n", round($x1, 5));
-    printf("R2 = %.5f\n", round($x2, 5));
+    echo number_format($x1,5,'.','') . PHP_EOL;
+    echo number_format($x2,5,'.',' ') . PHP_EOL;
 
 } else {
     echo "Impossivel calcular";
